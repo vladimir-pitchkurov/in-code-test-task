@@ -20,6 +20,19 @@ export class AppComponent implements OnInit {
     this.activeUser = this.userList[0];
   }
 
+  toggleActiveCli(cli){
+    this.activeUser = cli;
+  }
 
+  isActiveCli(cli){
+    return (cli.general.firstName === this.activeUser.general.firstName)&&
+      (cli.general.lastName === this.activeUser.general.lastName)&&
+      (cli.contact.email === this.activeUser.contact.email)&&
+      (cli.contact.phone === this.activeUser.contact.phone);
+  }
+
+  changeActiveUser(){
+    this.activeUser = this.userList[0];
+  }
 
 }
