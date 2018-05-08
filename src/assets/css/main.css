@@ -1,0 +1,48 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #fff;
+  background-color: #1b1b1b;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+.container{
+
+}
+.row{
+  display: flex;
+}
+
+.client-list, .search-item{
+  list-style: none;
+
+  padding: 10px;
+}
+
+.short-inf{
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+
+}
+.short-img{
+
+}
+.short-img img{
+  width: auto;
+  height: auto;
+  max-width: 64px;
+  max-height: 64px;
+}
+
+.left-sidebar{
+  width: 25%;
+  background-color: #5a6268;
+}
+li{
+  background-color: #1d2124;
+}
