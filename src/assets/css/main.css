@@ -119,6 +119,14 @@ header {
   background-color: #36404a;
 }
 
+header a{
+  text-decoration: none;
+  color: white;
+  background-color: #a724ff;
+  padding: 5px;
+  border-radius: 4px;
+}
+
 /*media*/
 
 @media screen and (max-width: 990px){
