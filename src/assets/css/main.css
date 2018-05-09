@@ -8,24 +8,27 @@ body {
   background-color: #1b1b1b;
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
+  font-size: 12px;
 }
 
 .container {
-animation-duration: 0.7s;
+  animation-duration: 0.7s;
 }
 
 .row {
   display: flex;
 }
 
-.search-item{
+.search-item {
   border: 2px solid silver;
   display: flex;
   align-items: center;
+  justify-content: center;
   height: 40px;
+  overflow: hidden;
 }
 
-.search-item>input, .search-item>label{
+.search-item > input, .search-item > label {
   height: 28px;
 }
 
@@ -37,18 +40,19 @@ animation-duration: 0.7s;
 .short-inf {
   display: flex;
   align-items: center;
-  margin: 3%;
-  padding: 5%;
+  margin: 2%;
+  padding: 2%;
   background-color: #1d2124;
 
 }
 
 .short-inf:hover {
+  cursor: pointer;
   background-color: rgba(93, 35, 118, 0.48);
   transform: scale(1.03);
-  -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
-  -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
-  box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
 .short-img {
@@ -75,6 +79,8 @@ li {
   display: flex;
   width: 74%;
   align-items: flex-start;
+  font-size: 1.2rem;
+  overflow: visible;
 }
 
 .detail-img img {
@@ -95,20 +101,39 @@ li {
   background-color: rgba(93, 35, 118, 0.38);
   transform: scale(1.03);
   box-shadow: #1d2124;
-  -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
-  -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
-  box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
-.header-title{
+.header-title {
   flex: 1;
   text-align: center;
 }
 
-header{
+header {
   height: 45px;
   border-bottom: 1px solid silver;
   display: flex;
   align-items: center;
   background-color: #36404a;
+}
+
+/*media*/
+
+@media screen and (max-width: 990px){
+.left-sidebar{
+  width: 35%;
+}
+}
+@media screen and (max-width: 612px){
+  .row{
+    display: block;
+  }
+  .left-sidebar{
+    width: auto;
+  }
+  .right-preview{
+    width: auto;
+  }
 }

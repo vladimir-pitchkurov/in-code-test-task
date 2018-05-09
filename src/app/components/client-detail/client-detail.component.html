@@ -1,0 +1,23 @@
+<div *ngIf="activeUser" class="right-preview">
+  <div class="detail-img"><img src="{{activeUser.general.avatar}}" alt="avatar"></div>
+  <div class="detail-text">
+    <h3>Full name: {{activeUser.general.firstName}} {{activeUser.general.lastName}},</h3>
+    <p>Company: {{activeUser.job.company}}</p>
+    <p>Position: {{activeUser.job.title}}</p>
+    <ul>
+      Contacts:
+      <li>Email: {{activeUser.contact.email}}</li>
+      <li>Phone: {{activeUser.contact.phone}}</li>
+    </ul>
+    <ul>
+      Address:
+      <li>Street: {{activeUser.address.street}}</li>
+      <li>City: {{activeUser.address.city}}</li>
+      <li>ZipCode: {{activeUser.address.zipCode}}</li>
+      <li>Country: {{activeUser.address.country}}</li>
+    </ul>
+  </div>
+</div>
+<div *ngIf="!activeUser" class="right-preview">
+  <p>User list is empty</p>
+</div>

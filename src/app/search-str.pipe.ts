@@ -7,10 +7,7 @@ import {isUndefined} from "util";
 export class SearchStrPipe implements PipeTransform {
 
   transform(clients: any, searchString: any): any {
-
-    if(isUndefined(clients) || clients === undefined){
-      return ;
-    }
+    if(isUndefined(clients) || clients === undefined){return ;}
     if(isUndefined(searchString) || searchString === undefined){return clients;}
 
     return clients.filter((user) => {
@@ -26,5 +23,4 @@ export class SearchStrPipe implements PipeTransform {
         (user.address.country.toLowerCase().includes(searchString.toLowerCase()));
     });
   }
-
 }

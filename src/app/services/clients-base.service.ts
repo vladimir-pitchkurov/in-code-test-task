@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
@@ -7,9 +7,44 @@ export class ClientsBaseService {
 
   constructor() { }
 
-  public getClients(){
+  private activeCli;
+
+  public getClients() {
     return this.clients;
   }
+
+  public setActiveCli(cli) {
+    this.activeCli = cli;
+  }
+
+  public getActiveCli() {
+    return this.activeCli;
+  }
+
+  getEmptyUser() {
+    return {
+      "general": {
+        "firstName": "",
+        "lastName": "",
+        "avatar": ""
+      },
+      "job": {
+        "company": "",
+        "title": ""
+      },
+      "contact": {
+        "email": "",
+        "phone": ""
+      },
+      "address": {
+        "street": "",
+        "city": "",
+        "zipCode": "",
+        "country": ""
+      }
+    }
+  }
+
   public clients = [
     {
       "general": {

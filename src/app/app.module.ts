@@ -1,17 +1,17 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { ListComponent } from './components/list/list.component';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 import {FormsModule} from "@angular/forms";
-import { SearchStrPipe } from './search-str.pipe';
+
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './app.component';
+import {SearchStrPipe} from './search-str.pipe';
+import {ClientDetailComponent} from './components/client-detail/client-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListComponent,
-    SearchStrPipe
+    SearchStrPipe,
+    ClientDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -21,4 +21,5 @@ import { SearchStrPipe } from './search-str.pipe';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
